@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(root.png);
+}
+
+#track {
+    width: 600px;
+    height: 947px;
+    background-image: url('road.png');
+    animation: moveRoad 2s linear infinite;
+    background-repeat: repeat-y;
+    background-position: 0%;
+}
+
+@keyframes moveTrack {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: 500px
+    }
+}
+
+#racer {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 400px;
+    left: 100px;
+    background-image: url('run1.png');
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+#challenger {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    background-image: url('run2.png');
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    animation: blockRacer 0.7s linear infinite
+}
+
+@keyframes blockRacer {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 500px
+    }
+}
+
+#score {
+    position: fixed;
+    top: 0px;
+    right: 10px;
+    background: rgb(187, 255, 0);
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+    white-space: nowrap;
+    padding: 12px;
+}
